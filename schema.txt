@@ -1,0 +1,11 @@
+beware: the header is aligned on 2 bytes
+
+rbp+8	return address
+rbp		the caller's frame pointer
+rbp-20h	BUFFER : message[4]
+(offsets are in hex...)
+
+40	useless bytes (including the fp)
+8	return address bytes
+so, a total of
+48	bytes of payload
